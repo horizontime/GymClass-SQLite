@@ -1,0 +1,30 @@
+# Ignore node_modules 
+*/node_modules/
+
+# Ignore .env files 
+*/.env
+
+# Ignore sqlite3 database
+*/database.db
+
+# Ignore log files
+*.log
+npm-debug.log*
+
+# Ignore API testing folder
+*/bruno-api-testing/
+
+# Ignore build output
+*/dist/
+*/build/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
