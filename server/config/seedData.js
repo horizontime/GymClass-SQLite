@@ -10,7 +10,7 @@ export const sampleUser = [
 ];
 
 export const coaches = [
-    { id: 1, name: "John Appleseed", specialty: "Strength Training" },
+    { id: 1, name: "Johnny Appleseed", specialty: "Strength Training" },
     { id: 2, name: "Jane Smith", specialty: "Yoga" },
     { id: 3, name: "Mike Johnson", specialty: "Cardio Fitness" },
     { id: 4, name: "Emily Davis", specialty: "Nutrition Coaching" },

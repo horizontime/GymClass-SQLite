@@ -13,7 +13,7 @@ export const home = async (req, res) => {
                 resolve(row);
             });
         });
-        
+
         return res.status(200).json(user);
     } catch (err) {
         return res.status(500).json({ message: "Server error" });
@@ -178,7 +178,8 @@ export const getClassAttendance = async (req, res) => {
             JOIN 
                 coaches co ON c.coach_id = co.id
             WHERE 
-                u.id = ? AND c.start_time ${attendanceType === "past" ? "<" : ">"} CURRENT_TIMESTAMP
+                u.id = ? AND 
+                c.start_time ${attendanceType === "past" ? "<" : ">"} datetime('now', 'localtime')
             ORDER BY 
                 c.start_time ${attendanceType === "past" ? "DESC" : "ASC"}
             LIMIT ? OFFSET ?`;
@@ -198,4 +199,3 @@ export const getClassAttendance = async (req, res) => {
         return res.status(500).json({ message: "Server error", error: err.message });
     }
 };
-
